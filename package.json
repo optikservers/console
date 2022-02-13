@@ -1,0 +1,24 @@
+{
+  "name": "optik-console",
+  "version": "1.0.0",
+  "description": "OptikServers abuse anti-cheat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/optikservers/console.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/optikservers/console/issues"
+  },
+  "homepage": "https://github.com/optikservers/console#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "discord-webhook-node": "^1.1.8",
+    "dockerode": "^3.3.1"
+  }
+}
