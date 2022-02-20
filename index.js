@@ -11,15 +11,15 @@ var webhook = new Webhook("https://discordapp.com/api/webhooks/94246883931943738
 // List docker containers and iterate
 docker.listContainers(function (err, containers) {
     if (err) {
-        console.log(chalk.red.bold("[ERROR] Error communicating with docker, is the daemon online?"))
+        console.log(chalk.red.bold("[ERROR] Error communicating with docker, is the daemon online?\n" + err))
         process.exit(1);
     }
     containers.forEach(async function(container) {
         var e = await docker.getContainer(container.Id).stats({stream:false});
-        console.log(e);
+        // console.log(e);
         var containerName = container.Names[0].replace("/", "");
         var logs = await docker.getContainer(container.Id).logs(logOpts);
-        console.log(container);
+        // console.log(container);
         logs = logs.toString("utf8");
         banned.forEach(async function(word) {
             if (logs.includes(word)) {
