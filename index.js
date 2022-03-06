@@ -7,7 +7,7 @@ var logOpts = {stdout: 1,stderr: 1,tail:100,follow:0};
 // Initialise docker connection
 var docker = new Dockerode({socketPath: '/var/run/docker.sock'});
 
-var webhook = new Webhook("https://discordapp.com/api/webhooks/942468839319437383/H7SHzodcO0vqQOnlaSldzX1r6m_gifI7FGzg2OgTo9rKSkoLz8AIhEaoNyqeBKcUvt6m");
+var webhook = new Webhook("DISCORD_WEBHOOK");
 // List docker containers and iterate
 docker.listContainers(function (err, containers) {
     if (err) {
