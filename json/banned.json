@@ -3,6 +3,7 @@
     "root",
     "pterovm",
     "ddos",
+    "fallocate",
     "booter",
     "nullping",
     "socks5",
